@@ -1,5 +1,21 @@
-git config --global user.name "adleiseifer"
-git config --global user.email "andreas.leiseifer@gmail.com"
+// identity
+git config --global user.name "..."
+git config --global user.email "..."
+
+// change editor (default is vi)
+git config --global core.editor nano
+
+// list config
+git config --list
+
+// init git at current dir
+git init
+
+// add everything to git
+git add .
+
+// commit - this opens the editor to add a commit message (no message no commit)
+git commit
 
 // list remote
 git remote -v
