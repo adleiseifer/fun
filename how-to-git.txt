@@ -1,3 +1,6 @@
+git config --global user.name "adleiseifer"
+git config --global user.email "andreas.leiseifer@gmail.com"
+
 // list remote
 git remote -v
 
