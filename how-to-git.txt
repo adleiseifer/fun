@@ -1,21 +1,97 @@
-// identity
+//// HELP ////
+git help <command>
+
+
+//// CONFIG ////
+
+// config identity
 git config --global user.name "..."
 git config --global user.email "..."
 
-// change editor (default is vi)
+// config editor (default is vi)
 git config --global core.editor nano
 
-// list config
+// show config
 git config --list
 
-// init git at current dir
+
+//// CREATE ////
+
+// create new local repository at current dir
 git init
 
-// add everything to git
+// clone an existing repository
+git clone https://github.com/user/name.git
+
+
+//// LOCAL CHANGES ////
+
+// changed files in working directory
+git status
+
+// changes to tracked filed
+git diff
+
+// add everything to the next commit
 git add .
 
-// commit - this opens the editor to add a commit message (no message no commit)
-git commit
+// add (some) changes in <file> to the next commit
+git add <file>
+git add -p <file> // interactively select portions
+
+// commit staged changes (those that were added)
+git commit // opens the editor to add a commit message (no message no commit)
+
+// commit all changes
+git commit -a // opens the editor to add a commit message (no message no commit)
+
+// avoid editor by supplying a message directly
+git commit -m "commit message"
+git commit -am "commit message" // combines -a and -m
+
+// adding changes to your last commit
+git add ...
+git commit --amend // also lets you change your last commit message
+git commit --amend --no-edit // will use same commit message
+
+// remove file
+git -rm <file> // file will be deleted from repository and working directory
+git -rm --cached <file> // file will be deleted from the repository, but will remain in the working directory as an untracked file
+
+
+//// UNTRACKED FILES / IGNORE ////
+Ignored files are tracked in a special file named .gitignore that is checked in at the root of your repository. This file contain patterns that are matched against file names in your repository to determine whether or not they should be ignored.
+
+
+
+//// COMMIT HISTORY ////
+
+// show all commits
+git log
+
+// show changes over time for <file>
+git log -p <file>
+
+// blame
+git blame <file>
+
+
+//// BRANCHES ////
+
+// show all branches
+git branch -av
+
+// switch
+git checkout <branch>
+
+// create new branch based on current HEAD
+git branch <new-branch>
+
+// create a new tracking branch based on a remote branch
+git checkout --track <remote/branch>
+
+
+//// REMOTE REPOSITORIES ////
 
 // list remote
 git remote -v
@@ -26,5 +102,8 @@ git remote add origin https://github.com/adleiseifer/fun.git
 // change url
 git remote set-url origin https://github.com/adleiseifer/fun.git
 
-// clone
-git clone https://github.com/adleiseifer/fun.git
+
+
+
+//// FURTHER READING ////
+https://www.atlassian.com/git/tutorials/what-is-git
