@@ -1,0 +1,8 @@
+// list remote
+git remote -v
+
+// add remote
+git remote add origin https://github.com/adleiseifer/fun.git
+
+// change url
+git remote set-url origin https://github.com/adleiseifer/fun.git
