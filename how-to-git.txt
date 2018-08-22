@@ -1,8 +1,6 @@
 //// HELP ////
 git help <command>
 
-test
-
 //// CONFIG ////
 
 // config identity
