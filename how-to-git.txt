@@ -88,6 +88,10 @@ git branch <new-branch>
 // create a new tracking branch based on a remote branch
 git checkout --track <remote/branch>
 
+// push to external repository
+git push [remote-name] [branch-name]
+Example: git push origin master
+
 
 //// REMOTE REPOSITORIES ////
 
@@ -104,4 +108,5 @@ git remote set-url origin https://github.com/adleiseifer/fun.git
 
 
 //// FURTHER READING ////
+https://git-scm.com/book/de/v1/Git-Grundlagen-Mit-externen-Repositorys-arbeiten
 https://www.atlassian.com/git/tutorials/what-is-git
