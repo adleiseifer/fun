@@ -57,6 +57,9 @@ git commit --amend --no-edit // will use same commit message
 git -rm <file> // file will be deleted from repository and working directory
 git -rm --cached <file> // file will be deleted from the repository, but will remain in the working directory as an untracked file
 
+// rename file (move)
+git mv old_filename new_filename
+
 
 //// UNTRACKED FILES / IGNORE ////
 Ignored files are tracked in a special file named .gitignore that is checked in at the root of your repository. This file contain patterns that are matched against file names in your repository to determine whether or not they should be ignored.
